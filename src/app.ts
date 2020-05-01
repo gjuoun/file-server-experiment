@@ -43,7 +43,7 @@ const upload = multer({
 
 // accept form-data with field 'img'
 app.post('/upload/img', upload.single('img'), async (req, res) => {
-  // convert to 250x250 png file
+  // resize and convert to 250x250 png file
   const buffer = await sharp(req.file.buffer).resize({ width: 250, height: 250 }).png().toBuffer()
 
   // transfer file original name to a Parsed path
