@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose'
 
-export const db = mongoose.connect(`mongodb+srv://gjuoun:21346687@cluster0-j5f0q.mongodb.net/test?retryWrites=true&w=majority`,
+export const db = mongoose.connect(``,
   {
     useNewUrlParser: true, useUnifiedTopology: true
   }, () => {
